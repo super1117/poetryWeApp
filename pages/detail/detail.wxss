@@ -1,0 +1,58 @@
+/* pages/detail/detail.wxss */
+page{
+  background: #f2f4f7;
+  font-weight: 300;
+}
+swiper-item{
+  overflow: scroll;
+}
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height:80rpx;
+  background: white;
+  box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.1);
+}
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 20%;
+  color: #777;
+}
+.on {
+  color: #000;
+  border-bottom: 5rpx solid #000;
+}
+.content{
+  margin: 24rpx;
+  padding: 24rpx;
+  background: white;
+  background-color:rgba(255,255,255,1);
+  border-radius: 12rpx;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.dashed-line{
+  overflow: hidden;
+  background: gray;
+  width: 100%;
+  border-top:1px dashed #eee;
+  margin-top: 24rpx;
+  margin-bottom: 24rpx;
+}
+.content-title{
+  font-size: 42rpx;
+  font-weight: 500;
+  color: black;
+}
+.content-author{
+  font-size: 32rpx;
+  color: gray;
+  margin-top: 24rpx;
+  margin-bottom: 24rpx;
+}
+.content-tag{
+  text-align: left;
+  font-size: 32rpx;
+  color: gray;
+}

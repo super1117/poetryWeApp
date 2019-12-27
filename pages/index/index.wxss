@@ -1,0 +1,87 @@
+/**index.wxss**/
+page{
+  background: white;
+  font-weight: 300;
+}
+.container{
+  width: 100%;
+  height: auto;
+  padding: 0px;
+}
+.header-img{
+  width: 100%;
+  height: 120rpx;
+}
+.search-container{
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+}
+.search-container input{
+  width: 75vw;
+  float: left;
+  border: 1rpx solid #333;
+  padding: 12rpx;
+}
+.search-container text{
+  padding: 12rpx;
+  background: #333;
+  color: white;
+  display: flex;
+}
+.fillter-container{
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.1);
+}
+.fillter-container view{
+  float: left;
+  width: 25vw;
+  text-align: center;
+}
+.fillter-container image{
+  margin-left: 8rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.line{
+  width: 100%;
+  height: 1rpx;
+  background: #cccccc;
+}
+.list-container{
+  width: 100%;
+  padding: 8rpx;
+  background: #f2f4f7;
+}
+.poetry-container{
+  margin: 24rpx;
+  padding: 24rpx;
+  background: white;
+  background-color:rgba(255,255,255,1);
+  border-radius: 12rpx;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.1);
+}
+.poetry-title{
+  color: black;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.poetry-author{
+  color: gray;
+  font-size: 32rpx;
+  font-weight: 300;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+}
+.poetry-line{
+  overflow: hidden;
+  background: gray;
+  width: 100%;
+  border-top:1px dashed #eee;
+  margin-top: 24rpx;
+  margin-bottom: 24rpx;
+}
+.poetry-tag{
+  font-size: 32rpx;
+  color: gray;
+}

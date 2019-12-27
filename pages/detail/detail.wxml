@@ -1,0 +1,43 @@
+<!--pages/detail/detail.wxml-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">原文</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">赏析</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">关于</view>
+</view>
+<swiper style='widht:100%;height:{{vh}}px;' current='{{currentTab}}' bindchange="onPageChangedListener">
+  <swiper-item>
+    <scroll-view class="scrollWrap" scroll-y="true" style='height:{{vh}}px;'>
+      <view class='content'>
+        <view class='content-title'>{{poetry.title}}</view>
+        <view class='content-author'>{{poetry.dynasty}} {{poetry.author}}</view>
+        <text class='content-detail'>{{poetry.content}}</text>
+        <view class='dashed-line'/>
+        <view class='content-tag'>{{poetry.tags}}</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+      <scroll-view class="scrollWrap" scroll-y="true" style='height:{{vh}}px;'>
+      <view class='content' wx:for='{{about}}' wx:key=''>
+        <view class='content-title'>大林寺桃花</view>
+        <view class='content-author'>唐朝 白居易</view>
+        <text class='content-detail'>人间四月芳菲尽，山寺桃花始盛开。
+        长恨春归无觅处，不知转入此中来。</text>
+        <view class='dashed-line'/>
+        <view class='content-tag'>写景，写花，早教古诗100首</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+      <scroll-view class="scrollWrap" scroll-y="true" style='height:{{vh}}px;'>
+      <view class='content'>
+        <view class='content-title'>大林寺桃花</view>
+        <view class='content-author'>唐朝 白居易</view>
+        <text class='content-detail'>人间四月芳菲尽，山寺桃花始盛开。
+        长恨春归无觅处，不知转入此中来。</text>
+        <view class='dashed-line'/>
+        <view class='content-tag'>写景，写花，早教古诗100首</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

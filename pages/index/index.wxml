@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <image class='header-img' src='https://static.fotor.com.cn/assets/projects/pages/fd6b7160-ef2b-11e9-aa5f-2bf1c8e9ab09_e67a804b-8780-4099-af05-42a87dd59afa_thumb.jpg' mode='center'/>
+  <view class='search-container'>
+    <input placeholder='请输入搜索关键字'></input>
+    <text>搜索</text>
+  </view>
+  <image class='header-img' src='https://static.fotor.com.cn/assets/projects/pages/8804fd20-daa8-11e9-97cb-cb151ab46b39_dcf3d882-6755-4908-83b4-b0018be1da6a_thumb.jpg' mode='center'/>
+  <!-- 筛选框 -->
+  <view class='fillter-container'>
+    <view>
+      <text>年级</text><image src='../images/ic_zk.png'/>
+    </view>
+    <view>
+      <text>朝代</text><image src='../images/ic_zk.png'/>
+    </view>
+    <view>
+      <text>形式</text><image src='../images/ic_zk.png'/>
+    </view>
+    <view>
+      <text>诗人</text><image src='../images/ic_zk.png'/>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class='list-container'>
+    <view class='poetry-container' wx:for='{{data_list}}' wx:key='' bindtap='onItemClick' data-position='{{index}}'>
+      <view class='poetry-title'>{{item.title}}</view>
+      <view class='poetry-author'>{{item.author}} {{item.dynasty}}</view>
+      <text class='poetry-content'>{{item.content}}</text>
+      <view class='poetry-line'/>
+      <text class='poetry-tag'>{{item.tags}}</text>
+    </view>
+  </view>
+</view>
