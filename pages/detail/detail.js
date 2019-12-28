@@ -1,4 +1,6 @@
 // pages/detail/detail.js
+const app = getApp()
+let thiz
 Page({
 
   /**
@@ -7,7 +9,13 @@ Page({
   data: {
     currentTab: 0,
     vh: 0,
-    poetry: {},
+    poetry: {
+      title: "",
+      auhtor: "",
+      dynasty: "",
+      content: "",
+      tags: ""
+    },
     authorInfo: {},
     about: [],
   },
@@ -27,12 +35,38 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let thiz = this
+    thiz = this
     wx.getSystemInfo({
       success: function (res) {
         thiz.setData({ vh: res.windowHeight - 80})
       }
     })  
+    wx.request({
+      url: app.globalData.host + 'poetry/yunPoetry/findEntityById',
+      data: {
+        id: options.id
+      },
+      success(res){
+        console.log(res.data)
+        var poetryJson = res.data.poetry.replace(/\n/g, "\\n").replace(/\r/g, "\\r")
+        var poetry = JSON.parse(poetryJson)
+        var authroInfoJson = res.data.authorInfo.replace(/\n/g, "\\n").replace(/\r/g, "\\r")
+        var auhtorInfo = JSON.parse(authroInfoJson)
+        var aboutJson = res.data.about.replace(/\n/g, "\\n").replace(/\r/g, "\\r")
+        var about = JSON.parse(aboutJson)
+        thiz.setData({
+            poetry: {
+              title: poetry.title,
+              author: res.data.author,
+              dynasty: res.data.dynasty,
+              content: poetry.content,
+              tags: res.data.tag
+            },
+          authorInfo: auhtorInfo,
+          about: about
+        })
+      }
+    })
   },
 
   /**

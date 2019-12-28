@@ -18,25 +18,16 @@
   </swiper-item>
   <swiper-item>
       <scroll-view class="scrollWrap" scroll-y="true" style='height:{{vh}}px;'>
-      <view class='content' wx:for='{{about}}' wx:key=''>
-        <view class='content-title'>大林寺桃花</view>
-        <view class='content-author'>唐朝 白居易</view>
-        <text class='content-detail'>人间四月芳菲尽，山寺桃花始盛开。
-        长恨春归无觅处，不知转入此中来。</text>
-        <view class='dashed-line'/>
-        <view class='content-tag'>写景，写花，早教古诗100首</view>
+      <view class='trans-content' wx:for='{{about}}' wx:key=''>
+        <view class='trans-title'>{{item.title}}</view>
+        <text class='trans-detail'>{{item.content}}</text>
       </view>
     </scroll-view>
   </swiper-item>
   <swiper-item>
       <scroll-view class="scrollWrap" scroll-y="true" style='height:{{vh}}px;'>
-      <view class='content'>
-        <view class='content-title'>大林寺桃花</view>
-        <view class='content-author'>唐朝 白居易</view>
-        <text class='content-detail'>人间四月芳菲尽，山寺桃花始盛开。
-        长恨春归无觅处，不知转入此中来。</text>
-        <view class='dashed-line'/>
-        <view class='content-tag'>写景，写花，早教古诗100首</view>
+      <view class='trans-content'>
+        <text>{{authorInfo.about}}</text>
       </view>
     </scroll-view>
   </swiper-item>

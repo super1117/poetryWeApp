@@ -46,7 +46,6 @@ Page({
         'content-type': 'application/json'
       },
       success(res) {
-        console.log(res.data.records[0])
         var array = new Array();
         for(var i = 0, j = res.data.records.length; i < j; i++){
           var item = res.data.records[i]
